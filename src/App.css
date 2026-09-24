@@ -1,0 +1,86 @@
+:root{
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --border: #dee2e6;
+  --primary: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --text: #212529;
+  --muted: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+  --dark: #212529;
+}
+
+html, body, #root { min-height: 100%; }
+
+body {
+  background: var(--bg);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 10pt;
+  color: var(--text);
+  margin: 0;
+}
+
+.tap-card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; }
+
+.tap-header { background: var(--primary); color: white; padding: 16px 24px; }
+.tap-header .tap-title { font-size: 13pt; font-weight: bold; margin: 0; color: white; }
+.tap-header .tap-sub   { font-size: 9pt; color: #cfe2ff; margin: 2px 0 0; }
+
+.tap-nav { background: var(--dark); padding: 6px 16px; display: flex; align-items: center; flex-wrap: wrap; }
+.tap-nav .nav-btn {
+  background: transparent; border: none; color: #dee2e6;
+  padding: 8px 12px; font-size: 10pt; border-radius: 4px; cursor: pointer;
+}
+.tap-nav .nav-btn:hover { background: #343a40; color: white; }
+.tap-nav .nav-user { color: #adb5bd; font-size: 9pt; margin-right: 10px; }
+
+.tap-hero-title { font-size: 18pt; font-weight: bold; }
+.tap-title      { font-size: 13pt; font-weight: bold; }
+.tap-muted      { color: var(--muted); font-size: 9pt; }
+.tap-stat       { color: var(--primary); font-size: 20pt; font-weight: bold; }
+.tap-stat-title { color: var(--muted); font-size: 9pt; }
+
+.btn-tap-primary {
+  background: var(--primary); border: none; color: white;
+  font-weight: bold; padding: 7px 14px; border-radius: 4px; cursor: pointer;
+}
+.btn-tap-primary:hover { background: var(--primary-hover); color: white; }
+
+.btn-tap-success {
+  background: var(--success); border: none; color: white;
+  font-weight: bold; padding: 7px 14px; border-radius: 4px; cursor: pointer;
+}
+.btn-tap-success:hover { background: #157347; color: white; }
+
+.btn-tap-default {
+  background: #e9ecef; border: none; color: var(--text);
+  padding: 7px 14px; border-radius: 4px; cursor: pointer;
+}
+.btn-tap-default:hover { background: #dee2e6; }
+
+.table-tap { width: 100%; border-collapse: collapse; background: white; font-size: 10pt; }
+.table-tap thead th {
+  background: #e9ecef; padding: 8px; text-align: left;
+  font-weight: bold; border-bottom: 1px solid var(--border);
+}
+.table-tap tbody td { padding: 8px; border-bottom: 1px solid #f1f3f5; height: 30px; }
+.table-tap tbody tr { cursor: pointer; }
+.table-tap tbody tr.selected { background: var(--primary); color: white; }
+.table-tap tbody tr.selected td { color: white; }
+.table-tap tbody tr:hover:not(.selected) { background: #f1f3f5; }
+
+.form-control-tap, .form-select-tap {
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 6px 8px; font-size: 10pt; background: white;
+  color: var(--text); width: 100%;
+}
+.form-control-tap:focus, .form-select-tap:focus {
+  outline: none; border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(13,110,253,0.15);
+}
+.form-control-tap:disabled { background: #e9ecef; }
+
+.label-tap { font-size: 10pt; color: var(--text); }
+.label-muted { font-size: 9pt; color: var(--muted); }
+.overflow-hidden { overflow: hidden; }
